@@ -1,0 +1,15 @@
+-- Incluindo chave primaria
+ALTER TABLE tbvendedores ADD PRIMARY KEY(MATRICULA);
+
+-- Incluindo coluna Data de Admissão
+ALTER TABLE tbvendedores ADD COLUMN (DATA_ADMISSAO DATE);
+
+-- Incluindo coluna FERIAS
+ALTER TABLE tbvendedores ADD COLUMN (DE_FERIAS BIT);
+
+-- SELECT
+SELECT * FROM tbvendedores;
+
+-- Atualização DATA_ADMISSAO e DE_FERIAS -> 00235 e 00236
+UPDATE tbvendedores SET DATA_ADMISSAO = 2014-08-15, DE_FERIAS = '0' WHERE (MATRICULA = '00235');
+UPDATE tbvendedores SET DATA_ADMISSAO = 2013-09-17, DE_FERIAS = '1', PERCENTUAL_COMISSAO = 0.08 WHERE (MATRICULA = '00236');
