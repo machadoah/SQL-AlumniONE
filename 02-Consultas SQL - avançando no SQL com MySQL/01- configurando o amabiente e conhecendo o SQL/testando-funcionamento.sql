@@ -1,0 +1,1 @@
+SELECT * FROM itens_notas_fiscais;
